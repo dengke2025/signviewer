@@ -10,12 +10,13 @@
 		0107596342715D9F0BD79533 /* SignViewerFinder.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 30EBDCB20212E1CE0232B708 /* SignViewerFinder.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0FB15104495D27C6DBEBB189 /* SignViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AB09A66A84282D36C4402C /* SignViewerApp.swift */; };
 		1F6E8CE3F1CDFD6FF780A8F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B743F863B5CDFA67D73B137 /* Assets.xcassets */; };
-		3102BB3C38A74DC101A8A92F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882CD8A81ABEECC814B27CAF /* ContentView.swift */; };
 		3D24DD05A1FFE873BDACB602 /* MachOSignatureReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02293D9404D0033DED0836A /* MachOSignatureReader.swift */; };
+		4020F6D97081CC1D88D337EC /* SignatureWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9406B3C507A19D294BFFE /* SignatureWindowView.swift */; };
 		538A84BBB70A4D483191B716 /* FileTypeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B449D4A076C747800A2ED0 /* FileTypeDetector.swift */; };
 		547469A420319097F6B45D5A /* DMGSignatureReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73797C504E2C70023C0BDDA7 /* DMGSignatureReader.swift */; };
 		59895B9E74446962DBFA00F7 /* SignatureReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB686A667EA3AA4E843DBF0 /* SignatureReader.swift */; };
 		A83237B399739454990F7079 /* SignatureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80305C07DD4C6D1811054FA8 /* SignatureInfo.swift */; };
+		B216489D35C8720DEF7E711C /* InstallerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30DC80C3D00133F0EECA186 /* InstallerView.swift */; };
 		BE858F35A22CA4635A6D1291 /* SignatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E1B938C1E73BF370C01C0 /* SignatureViewModel.swift */; };
 		D1C8CA848B44A65ABC099FE6 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A62538F91E5CFA60335BAF /* FinderSync.swift */; };
 		DB21A57D9E8783ABF480881D /* PKGSignatureReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F13CDBE67DF045AB25D5D /* PKGSignatureReader.swift */; };
@@ -57,7 +58,6 @@
 		76A62538F91E5CFA60335BAF /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
 		7BB686A667EA3AA4E843DBF0 /* SignatureReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureReader.swift; sourceTree = "<group>"; };
 		80305C07DD4C6D1811054FA8 /* SignatureInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureInfo.swift; sourceTree = "<group>"; };
-		882CD8A81ABEECC814B27CAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		940FD30D0A84729CFD958957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9B743F863B5CDFA67D73B137 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A24E1B938C1E73BF370C01C0 /* SignatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewModel.swift; sourceTree = "<group>"; };
@@ -65,7 +65,9 @@
 		C1B449D4A076C747800A2ED0 /* FileTypeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTypeDetector.swift; sourceTree = "<group>"; };
 		E149B1B103519DF1C0363E5A /* AppSignatureReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSignatureReader.swift; sourceTree = "<group>"; };
 		F02293D9404D0033DED0836A /* MachOSignatureReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachOSignatureReader.swift; sourceTree = "<group>"; };
+		F30DC80C3D00133F0EECA186 /* InstallerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallerView.swift; sourceTree = "<group>"; };
 		FB018DFA349ABF9B28D82EB2 /* SignViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCA9406B3C507A19D294BFFE /* SignatureWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureWindowView.swift; sourceTree = "<group>"; };
 		FFA1E22DBA15780BB73A5A73 /* SignViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignViewer.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,8 +163,9 @@
 		E217E9CFCD01F2FBD152533E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				882CD8A81ABEECC814B27CAF /* ContentView.swift */,
+				F30DC80C3D00133F0EECA186 /* InstallerView.swift */,
 				1AB8B53495FB2C51B40B005B /* SignatureDetailView.swift */,
+				FCA9406B3C507A19D294BFFE /* SignatureWindowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,9 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E988B96CF1B02360517EC75E /* AppSignatureReader.swift in Sources */,
-				3102BB3C38A74DC101A8A92F /* ContentView.swift in Sources */,
 				547469A420319097F6B45D5A /* DMGSignatureReader.swift in Sources */,
 				538A84BBB70A4D483191B716 /* FileTypeDetector.swift in Sources */,
+				B216489D35C8720DEF7E711C /* InstallerView.swift in Sources */,
 				3D24DD05A1FFE873BDACB602 /* MachOSignatureReader.swift in Sources */,
 				DB21A57D9E8783ABF480881D /* PKGSignatureReader.swift in Sources */,
 				0FB15104495D27C6DBEBB189 /* SignViewerApp.swift in Sources */,
@@ -273,6 +276,7 @@
 				A83237B399739454990F7079 /* SignatureInfo.swift in Sources */,
 				59895B9E74446962DBFA00F7 /* SignatureReader.swift in Sources */,
 				BE858F35A22CA4635A6D1291 /* SignatureViewModel.swift in Sources */,
+				4020F6D97081CC1D88D337EC /* SignatureWindowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

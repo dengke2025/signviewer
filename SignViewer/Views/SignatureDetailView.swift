@@ -3,21 +3,48 @@ import SwiftUI
 struct SignatureDetailView: View {
     let info: SignatureInfo
 
+    @State private var selectedTab = 0
+
     var body: some View {
-        TabView {
-            summaryTab
-                .tabItem { Label("概要", systemImage: "info.circle") }
+        VStack(spacing: 0) {
+            // Tab bar
+            HStack(spacing: 0) {
+                tabButton("Summary", systemImage: "info.circle", tag: 0)
+                tabButton("Entitlements", systemImage: "lock.shield", tag: 1)
+                tabButton("Profile", systemImage: "doc.badge.gearshape", tag: 2)
+                tabButton("Certificate Chain", systemImage: "link", tag: 3)
+            }
+            .padding(.horizontal)
+            .padding(.top, 8)
 
-            entitlementsTab
-                .tabItem { Label("Entitlements", systemImage: "lock.shield") }
+            Divider()
 
-            profileTab
-                .tabItem { Label("Profile", systemImage: "doc.badge.gearshape") }
-
-            certChainTab
-                .tabItem { Label("证书链", systemImage: "link") }
+            // Tab content
+            Group {
+                switch selectedTab {
+                case 0: summaryTab
+                case 1: entitlementsTab
+                case 2: profileTab
+                case 3: certChainTab
+                default: summaryTab
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .padding()
+    }
+
+    private func tabButton(_ title: String, systemImage: String, tag: Int) -> some View {
+        Button(action: { selectedTab = tag }) {
+            Label(title, systemImage: systemImage)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 6)
+                .background(
+                    RoundedRectangle(cornerRadius: 6)
+                        .fill(selectedTab == tag ? Color.accentColor.opacity(0.15) : Color.clear)
+                )
+                .foregroundColor(selectedTab == tag ? .accentColor : .secondary)
+        }
+        .buttonStyle(.plain)
     }
 
     // MARK: - Summary Tab
@@ -25,7 +52,6 @@ struct SignatureDetailView: View {
     private var summaryTab: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                // Status header
                 HStack(spacing: 12) {
                     statusIcon
                     VStack(alignment: .leading) {
@@ -41,15 +67,14 @@ struct SignatureDetailView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(RoundedRectangle(cornerRadius: 8).fill(statusBackgroundColor))
 
-                // Details grid
                 LazyVGrid(columns: [GridItem(.fixed(140), alignment: .trailing), GridItem(.flexible(), alignment: .leading)], spacing: 10) {
-                    detailRow("文件类型", info.fileType.rawValue)
+                    detailRow("File Type", info.fileType.rawValue)
                     detailRow("Bundle ID", info.bundleID ?? "N/A")
                     detailRow("Team ID", info.teamID ?? "N/A")
-                    detailRow("证书名称", info.certName ?? "N/A")
-                    detailRow("证书序列号", info.certID ?? "N/A")
+                    detailRow("Certificate", info.certName ?? "N/A")
+                    detailRow("Serial Number", info.certID ?? "N/A")
                     if let date = info.signingDate {
-                        detailRow("签名日期", dateFormatter.string(from: date))
+                        detailRow("Signing Date", dateFormatter.string(from: date))
                     }
                 }
                 .padding()
@@ -103,7 +128,7 @@ struct SignatureDetailView: View {
     private var entitlementsTab: some View {
         Group {
             if info.entitlements.isEmpty {
-                emptyPlaceholder("无 Entitlements", systemImage: "lock.open")
+                emptyPlaceholder("No Entitlements", systemImage: "lock.open")
             } else {
                 List(info.entitlements) { ent in
                     HStack(alignment: .top) {
@@ -131,16 +156,16 @@ struct SignatureDetailView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 12) {
                         LazyVGrid(columns: [GridItem(.fixed(140), alignment: .trailing), GridItem(.flexible(), alignment: .leading)], spacing: 10) {
-                            detailRow("名称", profile.name)
+                            detailRow("Name", profile.name)
                             detailRow("UUID", profile.uuid ?? "N/A")
                             detailRow("Team ID", profile.teamID ?? "N/A")
                             detailRow("App ID", profile.appID ?? "N/A")
                             if let creation = profile.creationDate {
-                                detailRow("创建日期", dateFormatter.string(from: creation))
+                                detailRow("Created", dateFormatter.string(from: creation))
                             }
                             if let expiry = profile.expirationDate {
-                                detailRow("过期日期", dateFormatter.string(from: expiry))
-                                detailRow("状态", expiry > Date() ? "有效" : "已过期")
+                                detailRow("Expires", dateFormatter.string(from: expiry))
+                                detailRow("Status", expiry > Date() ? "Valid" : "Expired")
                             }
                         }
                         .padding()
@@ -148,7 +173,7 @@ struct SignatureDetailView: View {
                     .padding()
                 }
             } else {
-                emptyPlaceholder("无 Provisioning Profile", systemImage: "doc.badge.gearshape")
+                emptyPlaceholder("No Provisioning Profile", systemImage: "doc.badge.gearshape")
             }
         }
     }
@@ -158,13 +183,12 @@ struct SignatureDetailView: View {
     private var certChainTab: some View {
         Group {
             if info.certificateChain.isEmpty {
-                emptyPlaceholder("无证书链信息", systemImage: "link")
+                emptyPlaceholder("No Certificate Chain", systemImage: "link")
             } else {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 0) {
                         ForEach(Array(info.certificateChain.enumerated()), id: \.element.id) { index, cert in
                             HStack(alignment: .top, spacing: 12) {
-                                // Indentation and chain connector
                                 VStack {
                                     if index > 0 {
                                         Rectangle()
@@ -187,17 +211,17 @@ struct SignatureDetailView: View {
                                         .font(.body.bold())
                                         .textSelection(.enabled)
                                     if cert.issuer != "Unknown" {
-                                        Text("签发者: \(cert.issuer)")
+                                        Text("Issuer: \(cert.issuer)")
                                             .font(.caption)
                                             .foregroundColor(.secondary)
                                     }
                                     if let from = cert.validFrom, let to = cert.validTo {
-                                        Text("有效期: \(dateFormatter.string(from: from)) ~ \(dateFormatter.string(from: to))")
+                                        Text("Valid: \(dateFormatter.string(from: from)) — \(dateFormatter.string(from: to))")
                                             .font(.caption)
                                             .foregroundColor(to < Date() ? .red : .secondary)
                                     }
                                     if let serial = cert.serialNumber {
-                                        Text("序列号: \(serial)")
+                                        Text("Serial: \(serial)")
                                             .font(.caption.monospaced())
                                             .foregroundColor(.secondary)
                                             .textSelection(.enabled)

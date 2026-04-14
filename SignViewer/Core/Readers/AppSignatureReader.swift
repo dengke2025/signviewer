@@ -15,7 +15,7 @@ struct AppSignatureReader: SignatureReader {
         let createStatus = SecStaticCodeCreateWithPath(url as CFURL, [], &staticCode)
         guard createStatus == errSecSuccess, let code = staticCode else {
             info.signStatus = .unsigned
-            info.errorMessage = "无法读取签名信息: \(createStatus)"
+            info.errorMessage = "Failed to read signature: \(createStatus)"
             return info
         }
 

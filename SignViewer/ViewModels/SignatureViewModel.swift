@@ -24,13 +24,13 @@ class SignatureViewModel: ObservableObject {
         let fileType = FileTypeDetector.detect(url: url)
 
         guard fileType != .unknown else {
-            errorMessage = "不支持的文件类型: \(url.pathExtension)"
+            errorMessage = "Unsupported file type: \(url.pathExtension)"
             isLoading = false
             return
         }
 
         guard let reader = readers[fileType] else {
-            errorMessage = "没有对应的签名读取器: \(fileType.rawValue)"
+            errorMessage = "No reader available for: \(fileType.rawValue)"
             isLoading = false
             return
         }
@@ -42,7 +42,7 @@ class SignatureViewModel: ObservableObject {
                 errorMessage = err
             }
         } catch {
-            errorMessage = "读取签名信息失败: \(error.localizedDescription)"
+            errorMessage = "Failed to read signature: \(error.localizedDescription)"
         }
 
         isLoading = false

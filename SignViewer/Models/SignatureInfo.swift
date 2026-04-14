@@ -1,10 +1,10 @@
 import Foundation
 
 enum SigningStatus: String, Codable {
-    case valid = "有效"
-    case expired = "已过期"
-    case unsigned = "未签名"
-    case invalid = "无效"
+    case valid = "Valid"
+    case expired = "Expired"
+    case unsigned = "Unsigned"
+    case invalid = "Invalid"
 }
 
 enum FileType: String, Codable {

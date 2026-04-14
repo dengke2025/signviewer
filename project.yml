@@ -16,8 +16,6 @@ targets:
     platform: macOS
     sources:
       - path: SignViewer
-    info:
-      path: SignViewer/Info.plist
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.signviewer.app
@@ -26,6 +24,7 @@ targets:
         CURRENT_PROJECT_VERSION: "1"
         CODE_SIGN_ENTITLEMENTS: SignViewer/SignViewer.entitlements
         ENABLE_HARDENED_RUNTIME: true
+        INFOPLIST_FILE: SignViewer/Info.plist
         GENERATE_INFOPLIST_FILE: false
     dependencies:
       - target: SignViewerFinder

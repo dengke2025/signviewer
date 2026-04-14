@@ -13,7 +13,7 @@ class FinderSyncExtension: FIFinderSync {
 
         let menu = NSMenu(title: "SignViewer")
         let item = NSMenuItem(
-            title: "查看签名信息",
+            title: "Signing Info",
             action: #selector(viewSignatureInfo(_:)),
             keyEquivalent: ""
         )

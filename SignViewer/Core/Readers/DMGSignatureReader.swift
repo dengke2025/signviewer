@@ -11,7 +11,7 @@ struct DMGSignatureReader: SignatureReader {
         )
 
         guard FileTypeDetector.hasCommandLineTools else {
-            info.errorMessage = "需要安装 Xcode Command Line Tools 才能检查 .dmg 签名。请运行: xcode-select --install"
+            info.errorMessage = "Xcode Command Line Tools required to inspect .dmg signatures. Run: xcode-select --install"
             return info
         }
 

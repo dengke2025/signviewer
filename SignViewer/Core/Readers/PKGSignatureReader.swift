@@ -11,7 +11,7 @@ struct PKGSignatureReader: SignatureReader {
         )
 
         guard FileTypeDetector.hasCommandLineTools else {
-            info.errorMessage = "需要安装 Xcode Command Line Tools 才能检查 .pkg 签名。请运行: xcode-select --install"
+            info.errorMessage = "Xcode Command Line Tools required to inspect .pkg signatures. Run: xcode-select --install"
             return info
         }
 
