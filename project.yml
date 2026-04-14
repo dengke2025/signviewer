@@ -1,0 +1,47 @@
+name: SignViewer
+options:
+  bundleIdPrefix: com.signviewer
+  deploymentTarget:
+    macOS: "13.0"
+  xcodeVersion: "16.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+
+targets:
+  SignViewer:
+    type: application
+    platform: macOS
+    sources:
+      - path: SignViewer
+    info:
+      path: SignViewer/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.signviewer.app
+        PRODUCT_NAME: SignViewer
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        CODE_SIGN_ENTITLEMENTS: SignViewer/SignViewer.entitlements
+        ENABLE_HARDENED_RUNTIME: true
+        GENERATE_INFOPLIST_FILE: false
+    dependencies:
+      - target: SignViewerFinder
+
+  SignViewerFinder:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: SignViewerFinder
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.signviewer.app.finder
+        PRODUCT_NAME: SignViewerFinder
+        CODE_SIGN_ENTITLEMENTS: SignViewerFinder/SignViewerFinder.entitlements
+        INFOPLIST_FILE: SignViewerFinder/Info.plist
+        GENERATE_INFOPLIST_FILE: false
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SKIP_INSTALL: true

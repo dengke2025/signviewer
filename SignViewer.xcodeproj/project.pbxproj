@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0107596342715D9F0BD79533 /* SignViewerFinder.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 30EBDCB20212E1CE0232B708 /* SignViewerFinder.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0FB15104495D27C6DBEBB189 /* SignViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AB09A66A84282D36C4402C /* SignViewerApp.swift */; };
+		1F6E8CE3F1CDFD6FF780A8F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B743F863B5CDFA67D73B137 /* Assets.xcassets */; };
+		3102BB3C38A74DC101A8A92F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882CD8A81ABEECC814B27CAF /* ContentView.swift */; };
+		3D24DD05A1FFE873BDACB602 /* MachOSignatureReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02293D9404D0033DED0836A /* MachOSignatureReader.swift */; };
+		538A84BBB70A4D483191B716 /* FileTypeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B449D4A076C747800A2ED0 /* FileTypeDetector.swift */; };
+		547469A420319097F6B45D5A /* DMGSignatureReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73797C504E2C70023C0BDDA7 /* DMGSignatureReader.swift */; };
+		59895B9E74446962DBFA00F7 /* SignatureReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB686A667EA3AA4E843DBF0 /* SignatureReader.swift */; };
+		A83237B399739454990F7079 /* SignatureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80305C07DD4C6D1811054FA8 /* SignatureInfo.swift */; };
+		BE858F35A22CA4635A6D1291 /* SignatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E1B938C1E73BF370C01C0 /* SignatureViewModel.swift */; };
+		D1C8CA848B44A65ABC099FE6 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A62538F91E5CFA60335BAF /* FinderSync.swift */; };
+		DB21A57D9E8783ABF480881D /* PKGSignatureReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F13CDBE67DF045AB25D5D /* PKGSignatureReader.swift */; };
+		E988B96CF1B02360517EC75E /* AppSignatureReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149B1B103519DF1C0363E5A /* AppSignatureReader.swift */; };
+		EE9852F8B0EF428F73810FBD /* SignatureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8B53495FB2C51B40B005B /* SignatureDetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1D46B2A004B4A3E337B77E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17B9AA28A6FA72267EA767E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 095CC57934D8C2A9A14D4567;
+			remoteInfo = SignViewerFinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A20742D881F1DED5489DD4BC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0107596342715D9F0BD79533 /* SignViewerFinder.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		124F13CDBE67DF045AB25D5D /* PKGSignatureReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGSignatureReader.swift; sourceTree = "<group>"; };
+		1AB8B53495FB2C51B40B005B /* SignatureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureDetailView.swift; sourceTree = "<group>"; };
+		30EBDCB20212E1CE0232B708 /* SignViewerFinder.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SignViewerFinder.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		384B90121D3BF2DFD153DD96 /* SignViewerFinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignViewerFinder.entitlements; sourceTree = "<group>"; };
+		5C3F991F818690CBE7C174A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		73797C504E2C70023C0BDDA7 /* DMGSignatureReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMGSignatureReader.swift; sourceTree = "<group>"; };
+		76A62538F91E5CFA60335BAF /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		7BB686A667EA3AA4E843DBF0 /* SignatureReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureReader.swift; sourceTree = "<group>"; };
+		80305C07DD4C6D1811054FA8 /* SignatureInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureInfo.swift; sourceTree = "<group>"; };
+		882CD8A81ABEECC814B27CAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		940FD30D0A84729CFD958957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9B743F863B5CDFA67D73B137 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A24E1B938C1E73BF370C01C0 /* SignatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewModel.swift; sourceTree = "<group>"; };
+		C1AB09A66A84282D36C4402C /* SignViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewerApp.swift; sourceTree = "<group>"; };
+		C1B449D4A076C747800A2ED0 /* FileTypeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTypeDetector.swift; sourceTree = "<group>"; };
+		E149B1B103519DF1C0363E5A /* AppSignatureReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSignatureReader.swift; sourceTree = "<group>"; };
+		F02293D9404D0033DED0836A /* MachOSignatureReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachOSignatureReader.swift; sourceTree = "<group>"; };
+		FB018DFA349ABF9B28D82EB2 /* SignViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA1E22DBA15780BB73A5A73 /* SignViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignViewer.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		10DE780FE2F834423E5B0E1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB018DFA349ABF9B28D82EB2 /* SignViewer.app */,
+				30EBDCB20212E1CE0232B708 /* SignViewerFinder.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		171F4AF7EA891A94A3992584 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				80305C07DD4C6D1811054FA8 /* SignatureInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		20A6E4091D5E1E29069218A0 /* SignViewerFinder */ = {
+			isa = PBXGroup;
+			children = (
+				76A62538F91E5CFA60335BAF /* FinderSync.swift */,
+				940FD30D0A84729CFD958957 /* Info.plist */,
+				384B90121D3BF2DFD153DD96 /* SignViewerFinder.entitlements */,
+			);
+			path = SignViewerFinder;
+			sourceTree = "<group>";
+		};
+		3240724CC44F4DD22AA5CD90 /* SignViewer */ = {
+			isa = PBXGroup;
+			children = (
+				9B743F863B5CDFA67D73B137 /* Assets.xcassets */,
+				5C3F991F818690CBE7C174A8 /* Info.plist */,
+				FFA1E22DBA15780BB73A5A73 /* SignViewer.entitlements */,
+				D05F84AB936328E486D72A3A /* App */,
+				D0C3C173117A1E1F8707F12F /* Core */,
+				171F4AF7EA891A94A3992584 /* Models */,
+				639F669A0044DFD29D78CDEF /* ViewModels */,
+				E217E9CFCD01F2FBD152533E /* Views */,
+			);
+			path = SignViewer;
+			sourceTree = "<group>";
+		};
+		639F669A0044DFD29D78CDEF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A24E1B938C1E73BF370C01C0 /* SignatureViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		683AC4706D19416B784A2CFE = {
+			isa = PBXGroup;
+			children = (
+				3240724CC44F4DD22AA5CD90 /* SignViewer */,
+				20A6E4091D5E1E29069218A0 /* SignViewerFinder */,
+				10DE780FE2F834423E5B0E1F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D05F84AB936328E486D72A3A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C1AB09A66A84282D36C4402C /* SignViewerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D0C3C173117A1E1F8707F12F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C1B449D4A076C747800A2ED0 /* FileTypeDetector.swift */,
+				7BB686A667EA3AA4E843DBF0 /* SignatureReader.swift */,
+				D59FF6A8C2161E333367EF54 /* Readers */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D59FF6A8C2161E333367EF54 /* Readers */ = {
+			isa = PBXGroup;
+			children = (
+				E149B1B103519DF1C0363E5A /* AppSignatureReader.swift */,
+				73797C504E2C70023C0BDDA7 /* DMGSignatureReader.swift */,
+				F02293D9404D0033DED0836A /* MachOSignatureReader.swift */,
+				124F13CDBE67DF045AB25D5D /* PKGSignatureReader.swift */,
+			);
+			path = Readers;
+			sourceTree = "<group>";
+		};
+		E217E9CFCD01F2FBD152533E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				882CD8A81ABEECC814B27CAF /* ContentView.swift */,
+				1AB8B53495FB2C51B40B005B /* SignatureDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		095CC57934D8C2A9A14D4567 /* SignViewerFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AA24944642C0F2DEF9CCB42 /* Build configuration list for PBXNativeTarget "SignViewerFinder" */;
+			buildPhases = (
+				4BC9E59F286B5BD0CE757523 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SignViewerFinder;
+			packageProductDependencies = (
+			);
+			productName = SignViewerFinder;
+			productReference = 30EBDCB20212E1CE0232B708 /* SignViewerFinder.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		AC35B4BC1FE247FB28422967 /* SignViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F0729D6229D75708B989246 /* Build configuration list for PBXNativeTarget "SignViewer" */;
+			buildPhases = (
+				8C35310F540FFEDB147BB6CF /* Sources */,
+				4D1C18B801A0B32726A5A9A7 /* Resources */,
+				A20742D881F1DED5489DD4BC /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A21A6451D87E62E4B49656E /* PBXTargetDependency */,
+			);
+			name = SignViewer;
+			packageProductDependencies = (
+			);
+			productName = SignViewer;
+			productReference = FB018DFA349ABF9B28D82EB2 /* SignViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17B9AA28A6FA72267EA767E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 6F7E06F81F44F46BD99F8381 /* Build configuration list for PBXProject "SignViewer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 683AC4706D19416B784A2CFE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 10DE780FE2F834423E5B0E1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC35B4BC1FE247FB28422967 /* SignViewer */,
+				095CC57934D8C2A9A14D4567 /* SignViewerFinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D1C18B801A0B32726A5A9A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F6E8CE3F1CDFD6FF780A8F4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BC9E59F286B5BD0CE757523 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1C8CA848B44A65ABC099FE6 /* FinderSync.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C35310F540FFEDB147BB6CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E988B96CF1B02360517EC75E /* AppSignatureReader.swift in Sources */,
+				3102BB3C38A74DC101A8A92F /* ContentView.swift in Sources */,
+				547469A420319097F6B45D5A /* DMGSignatureReader.swift in Sources */,
+				538A84BBB70A4D483191B716 /* FileTypeDetector.swift in Sources */,
+				3D24DD05A1FFE873BDACB602 /* MachOSignatureReader.swift in Sources */,
+				DB21A57D9E8783ABF480881D /* PKGSignatureReader.swift in Sources */,
+				0FB15104495D27C6DBEBB189 /* SignViewerApp.swift in Sources */,
+				EE9852F8B0EF428F73810FBD /* SignatureDetailView.swift in Sources */,
+				A83237B399739454990F7079 /* SignatureInfo.swift in Sources */,
+				59895B9E74446962DBFA00F7 /* SignatureReader.swift in Sources */,
+				BE858F35A22CA4635A6D1291 /* SignatureViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A21A6451D87E62E4B49656E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 095CC57934D8C2A9A14D4567 /* SignViewerFinder */;
+			targetProxy = A1D46B2A004B4A3E337B77E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		106E1136438FA341B13F08C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SignViewer/SignViewer.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SignViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.signviewer.app;
+				PRODUCT_NAME = SignViewer;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3F2A5F44CF48996558429246 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		6C4D26920D437C18298023EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SignViewer/SignViewer.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SignViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.signviewer.app;
+				PRODUCT_NAME = SignViewer;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		730219DD7EB0A93F38392B78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		9BA484CADE0AF93AFAF626CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SignViewerFinder/SignViewerFinder.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SignViewerFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.signviewer.app.finder;
+				PRODUCT_NAME = SignViewerFinder;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EA93AAF7590D70C7AA2AEC70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SignViewerFinder/SignViewerFinder.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SignViewerFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.signviewer.app.finder;
+				PRODUCT_NAME = SignViewerFinder;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2AA24944642C0F2DEF9CCB42 /* Build configuration list for PBXNativeTarget "SignViewerFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA93AAF7590D70C7AA2AEC70 /* Debug */,
+				9BA484CADE0AF93AFAF626CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3F0729D6229D75708B989246 /* Build configuration list for PBXNativeTarget "SignViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				106E1136438FA341B13F08C9 /* Debug */,
+				6C4D26920D437C18298023EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6F7E06F81F44F46BD99F8381 /* Build configuration list for PBXProject "SignViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				730219DD7EB0A93F38392B78 /* Debug */,
+				3F2A5F44CF48996558429246 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17B9AA28A6FA72267EA767E4 /* Project object */;
+}
